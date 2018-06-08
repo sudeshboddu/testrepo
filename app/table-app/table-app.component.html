@@ -1,0 +1,9 @@
+<button (click)="onAddDiscountClick()">Apply Discount</button>
+<table>
+  <tr>
+    <th *ngFor="let c of columns">{{c}}</th>
+  </tr>
+  <tr (click)="onRowSelected(ch)" *ngFor="let ch of characters">
+    {{ch.discount}}
+  </tr>
+</table>

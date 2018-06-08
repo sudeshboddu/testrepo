@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checkboxes mode</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>	
+
+
+<!-- <app-table-row>
+  gridBoxId='gridbox2'
+  toolBarId='gridbox2Paging'
+  headerLabels='NAME,DISC_CODE,ENTITY TYPE,STATUS,GEO,FROM,TO,ROLENAME'
+  columnWidths='165,150,100,100,100,100,*,100'
+  columnTypes='ro,ro,ro,ro,ro,ro,ro,ro'
+  columnSort='na,na,str,str,na,na,na,na'
+  columnAlignments='left,left,left,left,left,left,left,left'
+  >
+</app-table-row> -->
+
+<button (click)="onAddDiscountClick()">Apply Discount</button>
+<table>
+  <tr>
+    <th *ngFor="let c of columns">{{c}}</th>
+  </tr>
+  <tr (click)="onRowSelected(ch)" *ngFor="let ch of characters">
+    {{ch.discount}}
+  </tr>
+</table>
+
+
+

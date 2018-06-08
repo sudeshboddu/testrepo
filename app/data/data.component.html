@@ -1,0 +1,64 @@
+<div>
+  <div class="container" style="float: left;margin-left:50px">
+    <div>
+      <p style="font-family: Verdana, Geneva, Tahoma, sans-serif">Eligible Discount List
+      <a href="url" style="color:blue;">Export</a></p>
+      <div id="gridbox1" style="width:250px;height:0px;overflow:hidden;"></div>
+      <app-dhtmlx-combo (selectedRow)="slectedRow($event)"></app-dhtmlx-combo>
+	        <!-- <app-table-app id="table-scroll" (selectedRow)="slectedRow($event)"></app-table-app> -->
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container" style="float: left;margin-top:50px;margin-right:50px;">
+    <button style="margin-bottom:10px;" (click)="onAddDiscountClick()" mat-button>Add Discount</button>
+    <br>
+    <button style="margin-bottom:10px;" mat-button>Remove All</button>
+  </div>
+
+  <div class="container" style="float: left;margin-top:-20px">
+      <div>
+          <p style="font-family: Verdana, Geneva, Tahoma, sans-serif"> Discount List
+          <a href="url" style="color:blue;">Export</a></p>
+          <!-- <div id="gridbox2" style="width:250px;height:0px;overflow:hidden;"></div> -->
+          <div *ngFor="let data of testTable">
+            
+            <div>{{data}} <span (click)="deleteOnImageClick(data)">x</span></div>
+          </div>
+        </div>   
+  </div> 
+
+  <div class="vl">
+    <hr>
+  </div>
+
+  <div class="container" style="float: top;margin-top:-30px">
+    <div>
+      <div class="transbox" style="float: top;margin-top:35px;margin-left:800px;margin-right:30px;">
+        <h3><b><p style="margin-left:10px;">Stacking Scenario Upload</p></b></h3>
+        <hr>
+        <a href="url" style="color:#006400;margin-left:10px;">Download stacking scenario Template</a>
+        <p style="margin-left:10px;"><b>Import Stacking Scenarios requests in spreadsheet(XLS/XLSX format).
+          File Limit: 50 rows</b></p>
+        <hr>
+      <div style="margin-left:10px;">
+        Select Import File:
+        <button style="margin-bottom:10px;" mat-button>Choose File</button>
+        No File Chosen
+      </div>
+      <p style="margin-left:10px;">Files with extension xls and xlsx only</p>
+      <div>
+        <button class="button" style="margin-bottom:10px;margin-left:10px;" mat-button>Submit</button>
+        <input type="radio" name="fileAdd" value="Add" checked = "checked">Add
+        <input type="radio" name="fileAdd" value="Replace"> Replace
+      </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <br>
+  <hr>
+<button style="margin-left:600px;" mat-button>Create Scenario</button>
